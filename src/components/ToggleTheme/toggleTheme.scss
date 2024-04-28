@@ -1,0 +1,17 @@
+
+.theme-btn {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.moon-icon, .sun-icon {
+  width: 100%;
+  height: 100%;
+}

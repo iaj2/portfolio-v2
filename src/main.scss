@@ -1,0 +1,46 @@
+// Document Colors
+$red: #C93232;
+$onyx: #2E3532;
+$orange: #FF7F51;
+$blue: #3F7CAC;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+[data-theme="light"] {
+  --color-bg: white;
+  --color-txt: #{$onyx};
+  --color-txt-2: black;
+}
+
+[data-theme="dark"] {
+  --color-bg: #{$onyx};
+  --color-txt: #e5e5e5;
+  --color-txt-2: white;
+}
+
+:root {
+
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-txt);
+}
+
+

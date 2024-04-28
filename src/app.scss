@@ -1,0 +1,15 @@
+
+#root {
+  width: inherit;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.254)
+}

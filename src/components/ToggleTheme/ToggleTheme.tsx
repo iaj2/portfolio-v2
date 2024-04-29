@@ -1,39 +1,20 @@
 import "./toggleTheme.scss";
 import SunIcon from "../../assets/sun.svg";
 import MoonIcon from "../../assets/moon.png"
-import { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
+interface Props {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+}
 
-const ToggleTheme = () => {
-  const [theme, setTheme] = useState("");
-
-  const getThemeAsString = (localStorageTheme: string | null , systemSettingDark: MediaQueryList): string => {
-    // check if user has theme preference stored
-    if (localStorageTheme) {
-      return localStorageTheme;
-    }
-    // else false back onto system setting
-    if (systemSettingDark.matches) {
-      return "dark";
-    }
-
-    return "light";
-  }
+const ToggleTheme = ({ theme, setTheme }: Props)  => {
 
   const swapTheme = (): void => {
     const newTheme: string = theme === "dark" ? "light": "dark";
     
     setTheme(newTheme);
   }
-
-  useEffect(function onPageLoad() {
-    // set initial theme
-    const localStorageTheme: string | null = localStorage.getItem("theme");
-    const systemSettingDark: MediaQueryList = window.matchMedia("(prefers-color-scheme: dark)")
-  
-    const themeString: string = getThemeAsString(localStorageTheme, systemSettingDark);
-    setTheme(themeString);
-  }, [])
 
   useEffect(function onThemeChange() {
     if (theme !== null) {
@@ -42,8 +23,8 @@ const ToggleTheme = () => {
     }
   }, [theme])
 
-  if (theme !== "") return (
-      <button className="theme-btn" onClick={swapTheme}>
+  if (theme) return (
+      <button className="header-btn theme-btn" onClick={swapTheme}>
         {/* light theme */}
         {theme === "light" && 
           <img src={SunIcon} alt="sun icon" className="sun-icon"/>
@@ -58,4 +39,4 @@ const ToggleTheme = () => {
   else return <></>
 }
 
-export default ToggleTheme
+export default ToggleTheme;

@@ -17,12 +17,14 @@ $screen-medium: 768px;
   --color-bg: white;
   --color-prmry: #{$onyx};
   --color-scndry: black;
+  --filter-invert: 0;
 }
 
 [data-theme="dark"] {
   --color-bg: #{$onyx};
   --color-prmry: #e5e5e5;
   --color-scndry: white;
+  --filter-invert: 1;
 }
 
 :root {

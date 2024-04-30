@@ -28,7 +28,7 @@
 }
 
 // Mobile Only
-@media only screen and (max-width: calc($screen-medium - 1px)) {
+@media (width < $screen-medium) {
 
   .nav-items {
     transform-origin: top center;
@@ -67,7 +67,7 @@
 }
 
 // > mobile only
-@media only screen and (min-width: $screen-medium) {
+@media (width >= $screen-medium) {
   .navbar {
     order: 0;
     display: flex;
@@ -84,5 +84,6 @@
     gap: 3rem;
     background-color: transparent;
     box-shadow: none;
+    font-size: 1.1rem;
   }
 }

@@ -1,6 +1,8 @@
 import './app.scss'
+import heartIcon from "./assets/heart-icon.svg";
 import ToggleTheme from './components/ToggleTheme/ToggleTheme'
 import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/Home";
 import { useState, useEffect } from "react";
 
 
@@ -36,10 +38,18 @@ function App() {
     <header>
       <ToggleTheme theme={theme} setTheme={setTheme}/>
       <Nav />
-    </header>
-
-    <main></main>
-    <footer></footer>
+    </header> 
+    <main>
+      <Home />
+    </main>
+    <footer>
+      <div className="footer-txt-wrapper">
+        <p>Made with</p>
+        <img src={heartIcon} alt="heart icon" />
+        <p>by Isaac James</p>
+      </div>
+      
+    </footer>
     </>
   )
 }

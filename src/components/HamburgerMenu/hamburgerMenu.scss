@@ -68,7 +68,7 @@ $line-gap: 1.2rem;
   }
 }
 
-@media only screen and (min-width: $screen-medium) {
+@media (width >= $screen-medium) {
   .menu-btn {
     display: none;
   }

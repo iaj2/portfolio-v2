@@ -1,0 +1,41 @@
+.contact-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.contact-methods {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-method {
+  list-style: none;
+ 
+  display: flex;
+  gap: 1rem;
+
+  img {
+    width: 2rem;
+    filter: invert(var(--filter-invert)) brightness(110%);
+  }
+}
+
+@media (width >= $screen-medium) {
+  .contact-section {
+    h1 {
+      text-align: left;
+    }
+  }
+  .contact-methods {
+    padding: 5px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

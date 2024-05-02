@@ -62,7 +62,7 @@
       "skills-h2 skills-items"
       "interests-h2 interests-txt"
       ". bitmoji-imgs";
-    column-gap: 4rem;
+    column-gap: 3.5rem;
 
     h1, h2 {
       margin-top: 0;
@@ -81,7 +81,7 @@
   .about-h1 {
     margin-top: 0;
     grid-area: about-h1;
-    @include grid-h-align-right();
+    text-align: left;
   }
 
   .about-txt {
@@ -95,6 +95,7 @@
   }
 
   .about-skill-items {
+    margin-right: 2.5rem;
     grid-area: skills-items;
 
     img {

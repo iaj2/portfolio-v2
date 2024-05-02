@@ -3,8 +3,8 @@ import ToggleTheme from './components/ToggleTheme/ToggleTheme'
 import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import { useState, useEffect } from "react";
-
 
 function App() {
   // site theme 
@@ -42,6 +42,7 @@ function App() {
     <main>
       <Home />
       <About />
+      <Contact />
     </main>
     <footer>
       <div className="footer-txt-wrapper">

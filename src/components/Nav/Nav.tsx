@@ -1,12 +1,7 @@
-import './nav.scss';
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import { useState } from "react";
 
-// interface Props {
-//   theme: string;
-// }
-
-const Nav = (/*{theme}: Props*/) => {
+const Nav = () => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
 
   return (

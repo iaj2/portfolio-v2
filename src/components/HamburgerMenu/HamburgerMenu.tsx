@@ -1,5 +1,3 @@
-import './hamburgerMenu.scss';
-
 interface Props {
   openMobileNav: boolean;
   setOpenMobileNav: React.Dispatch<React.SetStateAction<boolean>>

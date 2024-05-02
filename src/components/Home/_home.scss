@@ -1,11 +1,6 @@
-@import '../../main.scss';
-
 .home-section {
-  padding-top: 5rem;
-  display: grid;
-  justify-items: center;
-  grid-auto-rows: min-content;
-  text-align: center;
+  padding-top: 5rem !important;
+  @include section-mobile();
 }
 
 .home-header {
@@ -14,7 +9,6 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 1.5rem;
   color: $red;
 
   h1 {
@@ -36,6 +30,7 @@
 }
 
 .home-socials {
+  z-index: -1;
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -49,6 +44,7 @@
   img {
     width: 100%;
     filter: invert(var(--filter-invert)) brightness(110%);
+
   }
 
   

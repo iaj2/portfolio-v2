@@ -1,0 +1,10 @@
+{
+  "skills": [
+    {"fileName": "python.svg", "alt": "Python"},
+    {"fileName": "react.svg", "alt": "React"},
+    {"fileName": "javascript.svg", "alt": "JavaScript"},
+    {"fileName": "typescript.svg", "alt": "TypeScript"},
+    {"fileName": "html.svg", "alt": "HTML"},
+    {"fileName": "css.svg", "alt": "CSS"}
+  ]
+}

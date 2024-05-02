@@ -1,4 +1,3 @@
-import "./home.scss";
 import HandWaveIcon from "../../assets/hand-wave.png";
 import BitmojiSlideIn from "../../assets/bitmoji-slidin.png";
 import GithubIcon from "../../assets/github.svg";

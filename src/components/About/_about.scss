@@ -1,0 +1,134 @@
+.about-section {
+  padding-top: 3rem;
+  @include section-mobile();
+
+
+  h2 {
+    color: $red;
+  }
+}
+
+.about-h1 {
+  margin-bottom: 1rem;
+}
+
+.about-skill-items {
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  list-style: none;
+  color: $orange;
+
+  li > p{
+    text-align: center;
+  }
+
+  img {
+    filter: invert(var(--filter-invert)) brightness(105%);
+  }
+}
+
+.about-interests-txt{
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+.about-bitmoji-imgs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  img:nth-of-type(1){
+    width: 10rem;
+  }
+  
+  img:nth-of-type(2){
+    margin-top: 1rem;
+    $bitmoji-coffee-sz: 8rem;
+    width: $bitmoji-coffee-sz;
+    height: $bitmoji-coffee-sz;
+  }
+}
+
+@media (width >= $screen-medium){
+  .about-section {
+    padding-top: 9rem;
+    grid-template-areas: 
+      "about-h1 about-txt"
+      "skills-h2 skills-items"
+      "interests-h2 interests-txt"
+      ". bitmoji-imgs";
+    column-gap: 4rem;
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+
+  @mixin grid-h-align-right() {
+    text-align: right;
+    width: 100%;
+  }
+
+  .about-h1 {
+    margin-top: 0;
+    grid-area: about-h1;
+    @include grid-h-align-right();
+  }
+
+  .about-txt {
+    padding-bottom: 3rem;
+    grid-area: about-txt;
+  }
+
+  .about-skills-h2 {
+    grid-area: skills-h2;
+    @include grid-h-align-right();
+  }
+
+  .about-skill-items {
+    grid-area: skills-items;
+
+    img {
+      width: 6rem;
+    }
+  }
+
+  .about-interests-h2 {
+    grid-area: interests-h2;
+    @include grid-h-align-right();
+  }
+
+  .about-interests-txt {
+    margin-top: 5px;
+    margin-bottom: 2rem;
+    grid-area: interests-txt;
+  }
+
+  
+  
+  .about-bitmoji-imgs {
+    grid-area: bitmoji-imgs;
+
+    img:nth-of-type(1){
+      width: 14rem;
+    }
+    
+    img:nth-of-type(2){
+      margin-top: 2rem;
+      $bitmoji-coffee-sz: 9rem;
+      width: $bitmoji-coffee-sz;
+      height: $bitmoji-coffee-sz;
+    }
+  }
+ 
+}
+

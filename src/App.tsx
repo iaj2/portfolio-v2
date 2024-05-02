@@ -1,8 +1,8 @@
-import './app.scss'
 import heartIcon from "./assets/heart-icon.svg";
 import ToggleTheme from './components/ToggleTheme/ToggleTheme'
 import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
+import About from "./components/About/About";
 import { useState, useEffect } from "react";
 
 
@@ -41,6 +41,7 @@ function App() {
     </header> 
     <main>
       <Home />
+      <About />
     </main>
     <footer>
       <div className="footer-txt-wrapper">

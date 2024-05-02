@@ -11,6 +11,7 @@ $screen-medium: 768px;
 *:before,
 *:after {
   box-sizing: border-box;
+  transition: background-color 0.75s ease-out, color 0.75s ease-out;
 }
 
 [data-theme="light"] {
@@ -28,7 +29,6 @@ $screen-medium: 768px;
 }
 
 :root {
-
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -51,5 +51,30 @@ body {
 button:hover{
   cursor: pointer;
 }
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+@media (width >= $screen-medium){
+  h1 {
+    font-size: 3.3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@import "./_app.scss";
+@import "./components/Nav/_nav.scss";
+@import "./components/ToggleTheme/_toggleTheme.scss";
+@import "./components/HamburgerMenu/_hamburgerMenu.scss";
+@import "./components/Home/_home.scss";
+@import "./components/About/_about.scss";
 
 

@@ -1,4 +1,3 @@
-import "./toggleTheme.scss";
 import SunIcon from "../../assets/sun.svg";
 import MoonIcon from "../../assets/moon.png"
 import React, { useEffect } from "react";

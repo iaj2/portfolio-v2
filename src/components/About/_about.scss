@@ -1,8 +1,4 @@
 .about-section {
-  padding-top: 3rem;
-  @include section-mobile();
-
-
   h2 {
     color: $red;
   }
@@ -56,7 +52,7 @@
 
 @media (width >= $screen-medium){
   .about-section {
-    padding-top: 9rem;
+    margin-top: 9rem;
     grid-template-areas: 
       "about-h1 about-txt"
       "skills-h2 skills-items"
@@ -85,7 +81,7 @@
   }
 
   .about-txt {
-    padding-bottom: 3rem;
+    margin-bottom: 3.5rem;
     grid-area: about-txt;
   }
 
@@ -95,11 +91,17 @@
   }
 
   .about-skill-items {
-    margin-right: 2.5rem;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
     grid-area: skills-items;
+    justify-content: center;
 
     img {
-      width: 6rem;
+      width:4.5rem;
+    }
+
+    li > p {
+      margin-top: 0;
     }
   }
 

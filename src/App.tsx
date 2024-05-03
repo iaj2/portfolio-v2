@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import Work from "./components/Work/Work";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
     <main>
       <Home />
       <About />
+      <Work />
       <Contact />
     </main>
     <footer>

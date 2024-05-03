@@ -60,6 +60,10 @@ h2 {
   font-size: 1.7rem;
 }
 
+h3 {
+  font-size: 1.4rem;
+}
+
 @media (width >= $screen-medium){
   h1 {
     font-size: 3.3rem;
@@ -77,3 +81,4 @@ h2 {
 @import "./components/Home/_home.scss";
 @import "./components/About/_about.scss";
 @import "./components/Contact/contact";
+@import "./components/Work/work";

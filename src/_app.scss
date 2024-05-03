@@ -40,12 +40,20 @@ main {
 }
 
 @mixin section-mobile() {
-  padding-top: 3rem;
-  display: grid;
-  justify-items: center;
-  grid-auto-rows: min-content;
-  text-align: center;
+  
 }
+
+section {
+  margin-top: 3rem;
+  display: grid;
+  @media (width < $screen-medium) {
+    justify-items: center;
+    grid-auto-rows: min-content;
+    text-align: center;
+  }
+}
+
+
 
 footer {
   width: 100%;

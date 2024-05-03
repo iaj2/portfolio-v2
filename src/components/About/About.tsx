@@ -18,8 +18,8 @@ const About = () => {
       </p>
       <h2 className="about-skills-h2">SKILLS</h2>
       <ul className="about-skill-items">
-        {skillsData.skills.map((data)=> (
-          <li>
+        {skillsData.skills.map((data, index)=> (
+          <li key={index}>
             <img src={`./src/assets/${data.fileName}`} alt={data.alt} />
             <p>{data.alt}</p>
           </li>

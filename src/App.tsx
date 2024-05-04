@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Work from "./components/Work/Work";
+import Projects from "./components/Projects/Projects";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
       <Home />
       <About />
       <Work />
+      <Projects />
       <Contact />
     </main>
     <footer>

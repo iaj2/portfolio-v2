@@ -11,7 +11,7 @@ const ToggleTheme = ({ theme, setTheme }: Props)  => {
 
   const swapTheme = (): void => {
     const newTheme: string = theme === "dark" ? "light": "dark";
-    
+
     setTheme(newTheme);
   }
 

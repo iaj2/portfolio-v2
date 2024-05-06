@@ -2,7 +2,7 @@ import BitmojiBriefcase from "../../assets/bitmoji-briefcase.png";
 
 const Work = () => {
   return (
-    <section className="work-section">
+    <section id="work" className="work-section">
       <h1>Work Experience</h1>
       <div className="work-bitmoji-imgs">
         <img src={BitmojiBriefcase} alt="bitmoji with briefcase" />

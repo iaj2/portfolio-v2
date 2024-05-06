@@ -25,7 +25,6 @@
 }
 
 .home-socials {
-  z-index: -1;
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -35,10 +34,15 @@
     $social-link-sz: 2.3rem;
     width: $social-link-sz;
     height: $social-link-sz;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   img {
     width: 100%;
     filter: invert(var(--filter-invert)) brightness(110%);
+
   }
 
   
@@ -46,6 +50,7 @@
 
 @media (width >= $screen-medium) {
   .home-section {
+    scroll-margin: 0;
     width: 90%;
     justify-items: flex-start;
     grid-template-columns: 3fr 1fr;

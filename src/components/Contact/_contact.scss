@@ -15,13 +15,23 @@
   align-self: center;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .contact-method {
-  width: max-content;
   list-style: none;
-  display: flex;
-  gap: 1rem;
+  a {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: inherit;
+    text-decoration: none;
+
+    p {
+      margin: 0;
+    }
+  }
 
   img {
     width: 2rem;

@@ -52,7 +52,8 @@
 
 @media (width >= $screen-medium){
   .about-section {
-    margin-top: 9rem;
+    padding-top: 10rem;
+    scroll-margin: -9rem;
     grid-template-areas: 
       "about-h1 about-txt"
       "skills-h2 skills-items"

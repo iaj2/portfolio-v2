@@ -54,20 +54,21 @@
     margin: 0;
   }
 
-  &:hover {
-    filter: brightness(90%);
-  }
 }
 
 .projects-github-cta {
   margin-top: 2rem;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  color: inherit;
+  text-decoration: none;
 
   img {
+    margin-top: 5px;
     height: 1.5em;
     filter: invert(var(--filter-invert)) brightness(110%);
   }

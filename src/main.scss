@@ -11,7 +11,6 @@ $screen-medium: 768px;
 *:before,
 *:after {
   box-sizing: border-box;
-  transition: background-color 0.75s ease-out, color 0.75s ease-out;
 }
 
 [data-theme="light"] {
@@ -29,6 +28,9 @@ $screen-medium: 768px;
 }
 
 :root {
+  --header-height: 5rem;
+  scroll-behavior: smooth;
+  scroll-padding: var(--header-height);
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;

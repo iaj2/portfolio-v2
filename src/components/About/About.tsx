@@ -6,7 +6,7 @@ import skillsData from "./skillsData.json";
 const About = () => {
 
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <h1 className="about-h1">About Me</h1>
       <p className="about-txt">
         I’m a self-motivated and disciplined student at SFU, 
@@ -19,10 +19,13 @@ const About = () => {
       <h2 className="about-skills-h2">SKILLS</h2>
       <ul className="about-skill-items">
         {skillsData.skills.map((data, index)=> (
+          data.fileName && data.alt ?
           <li key={index}>
             <img src={`./src/assets/${data.fileName}`} alt={data.alt} />
             <p>{data.alt}</p>
           </li>
+          :
+          <></>
         ))}
       </ul>
       <h2 className="about-interests-h2">INTERESTS</h2>

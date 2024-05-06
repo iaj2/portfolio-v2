@@ -11,23 +11,21 @@
   border-radius: 15px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.443);
   font-weight: 600;
- 
-  
-  li {
-    text-align: left;
-  }
-  
+}
+
+.nav-item {
+  text-align: left;
+
   list-style: none;
+
   a{
     color:inherit;
     text-decoration: none;
   }
-  
 }
 
 // Mobile Only
 @media (width < $screen-medium) {
-
   .nav-items {
     transform-origin: top center;
     --current-scale: 0;
@@ -79,9 +77,21 @@
     min-width: fit-content;
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
     background-color: transparent;
     box-shadow: none;
     font-size: 1.1rem;
+  }
+
+  .nav-link {
+    padding-inline: 8px;
+    padding-block: 6px;
+    border-radius: 8px;
+
+    &.active, &:hover {
+      background-color: $red;
+      color: white;
+    }
+
   }
 }

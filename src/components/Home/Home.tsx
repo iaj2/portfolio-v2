@@ -6,7 +6,7 @@ import LinkedInIcon from "../../assets/linkedin.svg";
 
 const Home = () => {
   return (
-    <section className="home-section">
+    <section id="home" className="home-section">
       <div className="home-header">
         <h1>Hi,</h1>
         <img src={HandWaveIcon} alt="hand waving" className="home-hand-icon" />
@@ -22,8 +22,12 @@ const Home = () => {
           </p>
       </div>
       <div className="home-socials">
-        <a><img src={GithubIcon} alt="github" /></a>
-        <a><img src={LinkedInIcon} alt="LinkedIn" /></a>
+        <a href="https://github.com/iaj2" target="_blank">
+          <img src={GithubIcon} alt="github" />
+          </a>
+        <a href="https://www.linkedin.com/in/isaac-james-62765a278/" target="_blank">
+          <img src={LinkedInIcon} alt="LinkedIn" />
+          </a>
       </div>
     </section>
   )

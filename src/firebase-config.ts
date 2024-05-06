@@ -20,6 +20,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
+
+// FIRESTORE DATABASE
 const db = getFirestore(app);
 
+interface ProjectData {
+  name: string,
+  description: string,
+  githubLink: string,
+  tech: string[],
+}
+
 export { db };
+export type { ProjectData };

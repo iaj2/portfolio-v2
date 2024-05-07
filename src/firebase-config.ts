@@ -25,6 +25,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 interface ProjectData {
+  id: string,
   name: string,
   description: string,
   githubLink: string,

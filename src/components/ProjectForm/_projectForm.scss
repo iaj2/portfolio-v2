@@ -1,0 +1,62 @@
+.project-form {
+  width: 80%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--color-prmry);
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.project-form-tech-used {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  li {
+    @include item-tag($blue);
+    height: min-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    button {
+      padding: 0;
+      width: 15px;
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(179, 178, 178);
+      color: inherit;
+      border: none;
+      border-radius: 100px;
+      font-size: 0.6rem;
+    }
+  }
+}
+
+.project-form-submit {
+  height: 1.5rem;
+  background-color: var(--color-prmry);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

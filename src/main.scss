@@ -76,7 +76,124 @@ h3 {
   }
 }
 
-@import "./_app.scss";
+#root {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  // &.transition {
+  //   transition: background-color 0.75s ease-out, color 0.75s ease-out;
+  // }
+}
+
+header {
+  z-index: 1;
+  padding-inline: 1rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-bg);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.254);
+
+  @media (width >= $screen-medium) {
+    padding-inline: 2rem;
+    gap: 3rem;
+  }
+}
+
+.header-btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.header-btn, .navbar {
+  height: 2.5rem;
+}
+
+main {
+  padding-inline: 1rem;
+  width: 100%;
+  max-width: 60rem;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (width >= $screen-medium) {
+    padding-inline: 2rem;
+    
+  }
+}
+
+section {
+  padding-top: 3rem;
+  scroll-margin: -2rem;
+  margin: 0;
+  display: grid;
+  @media (width < $screen-medium) {
+    justify-items: center;
+    text-align: center;
+  }
+  @media (width >= $screen-medium) {
+    padding-top: 6rem;
+    scroll-margin: -4rem;
+  }
+}
+
+@mixin item-header($underline-width){
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-bottom: 8px;
+    text-align: center;
+    color: $red;
+  }
+
+  span {
+    width: $underline-width;
+    height: 2px;
+    background-color: $orange;
+  }
+}
+
+@mixin item-tag($background-color) {
+  padding-inline: 8px;
+  padding-block: 2px;
+  list-style: none;
+  border-radius: 8px;
+  background-color: $background-color;
+  font-size: 0.9rem;
+  color: white;
+}
+
+
+footer {
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.footer-txt-wrapper {
+  display: flex;
+  gap: 5px;
+
+  p {
+    margin: 0;
+  }
+}
+// Home Page
 @import "./components/Nav/_nav.scss";
 @import "./components/ToggleTheme/_toggleTheme.scss";
 @import "./components/HamburgerMenu/_hamburgerMenu.scss";
@@ -85,3 +202,7 @@ h3 {
 @import "./components/Contact/contact";
 @import "./components/Work/work";
 @import "./components/Projects/projects";
+
+// Admin Page
+@import "./pages/AdminPage/_adminPage.scss";
+@import "./components/ProjectForm/_projectForm.scss";

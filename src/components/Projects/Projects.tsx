@@ -33,27 +33,27 @@ const Projects = () => {
       <div className="projects-bitmoji-imgs">
         <img src={BitmojiComputer} alt="bitmoji on computer" />
       </div>
-      {projectData.map((data) => (
-          <div className="projects-item-wrapper">
-          <div className="projects-item-header">
-            <h3>{data.name}</h3>
-            <span>{/*Underline */}</span>
-          </div>
-          <p className="projects-item-description">
-          {data.description}
-          </p>
-          <ul className="projects-item-tech">
-            {
-              data.tech.map((value, indx)=> (
-                <li key={indx}>{value}</li>
-              ))
-            }
-          </ul>
-          <a href={data.githubLink} target="_blank" className="projects-item-github">
-            <img src={GithubIcon} alt="github" />
-            <p>Description & Code</p>
-            <img src={RightArrowIcon} alt="right arrow" />
-          </a>
+      {projectData.map((data, indx) => (
+          <div key={indx} className="projects-item-wrapper">
+            <div className="projects-item-header">
+              <h3>{data.name}</h3>
+              <span>{/*Underline */}</span>
+            </div>
+            <p className="projects-item-description">
+            {data.description}
+            </p>
+            <ul className="projects-item-tech">
+              {
+                data.tech.map((value, indx)=> (
+                  <li key={indx}>{value}</li>
+                ))
+              }
+            </ul>
+            <a href={data.githubLink} target="_blank" className="projects-item-github">
+              <img src={GithubIcon} alt="github" />
+              <p>Description & Code</p>
+              <img src={RightArrowIcon} alt="right arrow" />
+            </a>
         </div>
       ))}
       <a href="https://github.com/iaj2" target="_blank" className="projects-github-cta">

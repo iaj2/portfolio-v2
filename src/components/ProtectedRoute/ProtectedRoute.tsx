@@ -8,9 +8,9 @@ interface Props {
 
 const ProtectedRoute = ( { children }: Props ) => {
   const {currentUser} = auth;
-
+  console.log(currentUser)
   return (
-    currentUser ? children : <Navigate to="/admin-login" />  
+    currentUser ? children : <Navigate to="/admin-login" />
   )
 }
 

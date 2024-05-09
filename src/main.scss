@@ -183,19 +183,27 @@ footer {
   width: 100%;
   min-height: 4rem;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-.footer-txt-wrapper {
+.footer-txt-wrapper, .footer-icons-link-wrapper {
   display: flex;
+  align-items: center;
   gap: 5px;
 
   p {
     margin: 0;
+    font-size: inherit;
   }
+}
+
+.footer-icons-link-wrapper > a {
+  margin: 0;
+  color: inherit;
 }
 // Home Page
 @import "./components/Nav/_nav.scss";

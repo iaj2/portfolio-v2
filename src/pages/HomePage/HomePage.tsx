@@ -55,6 +55,10 @@ function HomePage() {
         <img src={heartIcon} alt="heart icon" />
         <p>by Isaac James</p>
       </div>
+      <div className="footer-icons-link-wrapper">
+        <p>All icons by</p>
+        <a href="https://icons8.com/">Icons8</a>
+      </div>
       
     </footer>
     </>

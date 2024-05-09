@@ -1,3 +1,7 @@
+
+import { ref, getDownloadURL } from "firebase/storage";
+import { storage } from "../../firebase-config";
+import RightArrowIcon from "../../assets/right-arrow.svg";
 import BitmojiCoffee from "../../assets/bitmoji-coffee.png";
 import BitmojiVball from "../../assets/bitmoji-vball.png";
 import PythonIcon from "../../assets/python.svg";
@@ -6,16 +10,46 @@ import JavaScriptIcon from "../../assets/javascript.svg";
 import TypeScriptIcon from "../../assets/typescript.svg";
 import HTMLIcon from "../../assets/html.svg";
 import CSSIcon from "../../assets/css.svg";
+import CPPIcon from "../../assets/cpp.svg";
+import SaSSIcon from "../../assets/sass.svg";
+import FireBaseIcon from "../../assets/firebase.svg";
+import { useEffect, useState } from "react";
+
+interface skillsData {
+  src: string
+  alt: string
+}
 
 const About = () => {
+  const [resumeURL, setResumeURL] = useState("");
 
-  const skills= [
+  useEffect(function onPageLoad() {
+    // get resume download url from firebase storage
+    const getResumeURL = async (): Promise<void> => {
+      try {
+        const resumeRef = ref(storage, "gs://portfolio-v2-a00fd.appspot.com/Resume-Fall-2023.pdf");
+        const url = await getDownloadURL(resumeRef);
+        setResumeURL(url);
+
+      } catch (error) {
+        console.error(error);
+      }
+      
+    }
+
+    getResumeURL();
+  }, [])
+
+  const skills: skillsData[] = [
     {src: PythonIcon, alt: "Python"},
     {src: ReactIcon, alt: "React"},
     {src: JavaScriptIcon, alt: "JavaScript"},
     {src: TypeScriptIcon, alt: "TypeScript"},
     {src: HTMLIcon, alt: "HTML"},
-    {src: CSSIcon, alt: "CSS"}
+    {src: CSSIcon, alt: "CSS"},
+    {src: SaSSIcon, alt: "SaSS"},
+    {src: CPPIcon, alt: "C++"},
+    {src: FireBaseIcon, alt: "Firebase"}
   ]
 
   return (
@@ -41,11 +75,20 @@ const About = () => {
           <></>
         ))}
       </ul>
+      <div className="about-resume-cta">
+        {
+          resumeURL &&
+            <a href={resumeURL} target="_blank" rel="noreferrer">
+            See my resume
+            <img src={RightArrowIcon} alt="arrow" />
+          </a>
+        }
+      </div>
       <h2 className="about-interests-h2">INTERESTS</h2>
       <p className="about-interests-txt">
         When I’m not in front of a computer screen,
         I’m probably at the gym, playing volleyball,
-          or sipping on some iced coffee at a nice coffee shop.
+          or sipping on some iced coffee.
       </p>
       <div className="about-bitmoji-imgs">
         <img src={BitmojiVball} alt="bitmoji playing volleyball" />

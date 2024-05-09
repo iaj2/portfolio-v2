@@ -1,9 +1,22 @@
 import BitmojiCoffee from "../../assets/bitmoji-coffee.png";
 import BitmojiVball from "../../assets/bitmoji-vball.png";
-import skillsData from "./skillsData.json";
-
+import PythonIcon from "../../assets/python.svg";
+import ReactIcon from "../../assets/react.svg";
+import JavaScriptIcon from "../../assets/javascript.svg";
+import TypeScriptIcon from "../../assets/typescript.svg";
+import HTMLIcon from "../../assets/html.svg";
+import CSSIcon from "../../assets/css.svg";
 
 const About = () => {
+
+  const skills= [
+    {src: PythonIcon, alt: "Python"},
+    {src: ReactIcon, alt: "React"},
+    {src: JavaScriptIcon, alt: "JavaScript"},
+    {src: TypeScriptIcon, alt: "TypeScript"},
+    {src: HTMLIcon, alt: "HTML"},
+    {src: CSSIcon, alt: "CSS"}
+  ]
 
   return (
     <section id="about" className="about-section">
@@ -18,10 +31,10 @@ const About = () => {
       </p>
       <h2 className="about-skills-h2">SKILLS</h2>
       <ul className="about-skill-items">
-        {skillsData.skills.map((data, index)=> (
-          data.fileName && data.alt ?
+        {skills.map((data, index)=> (
+          data.src && data.alt ?
           <li key={index}>
-            <img src={`./src/assets/${data.fileName}`} alt={data.alt} />
+            <img src={data.src} alt={data.alt} />
             <p>{data.alt}</p>
           </li>
           :

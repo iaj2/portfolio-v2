@@ -91,10 +91,11 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  height: var(--header-height);
+  min-height: var(--header-height);
   display: flex;
   justify-content: end;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
   background-color: var(--color-bg);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.254);
@@ -105,14 +106,17 @@ header {
   }
 }
 
+$header-btn-size: 2.5rem;
+
 .header-btn {
   padding: 0;
+  width: $header-btn-size;
   background-color: transparent;
   border: none;
 }
 
 .header-btn, .navbar {
-  height: 2.5rem;
+  height: $header-btn-size;
 }
 
 main {

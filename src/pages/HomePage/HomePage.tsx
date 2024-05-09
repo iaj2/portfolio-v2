@@ -29,6 +29,7 @@ function HomePage() {
   useEffect(function onPageLoad() {
     // set initial theme
     const localStorageTheme: string | null = localStorage.getItem("theme");
+    console.log(localStorageTheme);
     const systemSettingDark: MediaQueryList = window.matchMedia("(prefers-color-scheme: dark)")
   
     const themeString: string = getThemeAsString(localStorageTheme, systemSettingDark);
